@@ -1,4 +1,5 @@
 from typing import Any, Text, Dict, List
+
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 import requests
@@ -35,16 +36,18 @@ class ActionHelloLoc(Action):
 
         return []
 
+
 class Actioncoronastats(Action):
 
     def name(self) -> Text:
-        return "actions_corona_state_stat"
+        return "actions_corona_states_stat"
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        responses = requests.get("https://api.covid19india.org/data.json").json()
+        responses = requests.get(
+            "https://api.covid19india.org/data.json").json()
 
         entities = tracker.latest_message['entities']
         print("Now Showing Data For:", entities)
@@ -61,10 +64,10 @@ class Actioncoronastats(Action):
         for data in responses["statewise"]:
             if data["state"] == state.title():
                 print(data)
-                message = "Now Showing Cases For --> " + state.title() + " Since Last 24 Hours : "+ "\n" + "Active: " + data[
+                message = "Now Showing Cases For --> " + state.title() + " Since Last 24 Hours : " + "\n" + "Active: " + data[
                     "active"] + " \n" + "Confirmed: " + data["confirmed"] + " \n" + "Recovered: " + data[
-                              "recovered"] + " \n" + "Deaths: " + data["deaths"] + " \n" + "As Per Data On: " + data[
-                              "lastupdatedtime"]
+                    "recovered"] + " \n" + "Deaths: " + data["deaths"] + " \n" + "As Per Data On: " + data[
+                    "lastupdatedtime"]
 
         print(message)
         dispatcher.utter_message(message)

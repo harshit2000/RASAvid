@@ -16,7 +16,6 @@ nlu:
       - goodmorning
       - goodevening
       - good afternoon
-
   - intent: goodbye
     examples: |
       - good afternoon
@@ -30,7 +29,6 @@ nlu:
       - see you around
       - bye bye
       - see you later
-
   - intent: affirm
     examples: |
       - yes
@@ -39,7 +37,6 @@ nlu:
       - of course
       - that sounds good
       - correct
-
   - intent: deny
     examples: |
       - no
@@ -48,7 +45,6 @@ nlu:
       - I don't think so
       - don't like that
       - no way
-
   - intent: mood_great
     examples: |
       - perfect
@@ -65,7 +61,6 @@ nlu:
       - so so perfect
       - so good
       - so perfect
-
   - intent: mood_unhappy
     examples: |
       - my day was horrible
@@ -88,7 +83,12 @@ nlu:
       - are you a human?
       - am I talking to a bot?
       - am I talking to a human?
-
+      - who are you?
+      - who are you
+      - what are you
+      - tell me about yourself?
+      - tell me about yourself
+      - what are you?
   - intent: corona_intro
     examples: |
       - what is corona?
@@ -97,35 +97,33 @@ nlu:
       - tell me about corona
       - can you tell me about corona
       - can you tell me about covid-19
-
   - intent: corona_spread
     examples: |
       - how does corona virus spread?
-      - how does this virus spread
-
+      - how does this virus spread?
+      - how does corona spread?
+      - corona spread?
+      - covid spread.
+      - covid19 spread.
   - intent: corona_food_spread
     examples: |
       - how does food spread corona virus?
       - does consuming junk food spread corona virus?
       - how will corona spread from food?
-
   - intent: corona_spread_warm
     examples: |
       - how will warm weather stop corona virus?
       - Can warm weather actually stop corona?
       - will it stop with warm weather?
-
   - intent: corona_spread_risk
     examples: |
       - who is at higher risk of infection
       - who is more prone to get corona virus infection
-
   - intent: corona_community
     examples: |
       - what is community spread?
       - how does community spread occurs?
       - community spread
-
   - intent: corona_symptoms
     examples: |
       - What are the symptoms of novel coronavirus?
@@ -134,14 +132,12 @@ nlu:
       - What are the symptoms of corona virus?
       - symptoms of corona virus?
       - symptoms of covid19 virus?
-
   - intent: corona_mosq_spread
     examples: |
       - can mosquitoes spread corona virus?
       - how does mosquitoes spread corona virus?
       - mosquitoes spread covid-19 virus.
       - mosquitoes spread covid virus.
-
   - intent: corona_vaccine
     examples: |
       - Are there any vaccines available for prevention of corona virus?
@@ -161,7 +157,6 @@ nlu:
       - prevent corona
       - how once can prevent himself/herself from getting infected from covid19?
       - how once can prevent himself/herself from getting infected from corona?
-
   - intent: corona_infected person
     examples: |
       - If You or Someone You Know is Sick or Had Contact with Someone who Has COVID-19
@@ -207,40 +202,60 @@ nlu:
       - [Himachal Pradesh](state)
       - I live in [Himachal Pradesh](state:Himachal Pradesh)
       - [Jharkhand](state)
+      - I live in [Jharkhand](state:Jharkhand)
       - [Karnataka](state)
+      - I live in [Karnataka](state:Karnataka)
       - [Madhya Pradesh](state)
+      - I live in [Madhya Pradesh](state:Madhya Pradesh)
       - [Kerala](state)
+      - I live in [Kerala](state:Kerala)
       - [Maharashtra](state)
+      - I live in [Maharashtra](state:Maharashtra)
       - [Manipur](state)
+      - I live in [Manipur](state:Manipur)
       - [Meghalaya](state)
+      - I live in [Meghalaya](state:Meghalaya)
       - [Mizoram](state)
+      - I live in [Mizoram](state:Mizoram)
       - [Nagaland](state)
+      - I live in [Nagaland](state:Nagaland)
       - [Odisha](state)
+      - I live in [Odisha](state:Odisha)
       - [Punjab](state)
+      - I live in [Punjab](state:Punjab)
       - [Rajasthan](state)
+      - I live in [Rajasthan](state:Rajasthan)
       - [Sikkim](state)
+      - I live in [Sikkim](state:Sikkim)
       - [Tamil Nadu](state)
+      - I live in [Tamil Nadu](state:Tamil Nadu)
       - [Telangana](state)
+      - I live in [Telangana](state:Telangana)
       - [Tripura](state)
+      - I live in [Tripura](state:Tripura)
       - [Uttar Pradesh](state)
+      - I live in [Uttar Pradesh](state:Uttar Pradesh)
       - [Uttarakhand](state)
+      - I live in [Uttarakhand](state:Uttarakhand)
       - [West Bengal](state)
-
+      - [Delhi](state)
+      - I live in [Delhi](state:Delhi)
+      
   - intent: name_entry
     examples: |
-      - My name is [Harshit](name)
-      - [Harshit](name:Harshit) this side
-      - It's [Harshit](name:Harshit)
-      - [Harshit](name:Harshit) is my name
-      - [Harshit](name)
-      - [Ikshita](name)
-      - [Harshit](name:Harshit)
+      - My name is [Ashish](name)
+      - [ashish](name:Ashish) this side
+      - It's [ashish](name:Ashish)
+      - [ashish](name:Ashish) is my name
+      - [Ashish](name)
+      - [Rahul](name)
+      - [ashish](name:Ashish)
       - My name is [Harsh](name)
       - [harsh](name:Harsh) this side
       - It's [harsh](name:Harsh)
-      - [Pradeep](name:Pradeep) is my name
+      - [harsh](name:Harsh) is my name
       - [Harsh](name)
-      - [Ikshita](name)
+      - [Rahul](name)
       - [harsh](name:Harsh)
       - It is [Tom](name)
       - My name is [Bob](name)
@@ -253,20 +268,10 @@ nlu:
       - I am [demo](name)
       - myself [Harsh](name)
       - myself [demo](name)
-
-  - intent: covid_state
+  - intent: Thanks
     examples: |
-      - [Maharashtra](location)
-      - [Delhi](location)
-      - [Telengana](location)
-      - [Andhra Pradesh](location)
-      - [Haryana](location)
-      - [Uttar Pradesh](location)
-      - [Kerala](location)
-      - [Karnataka](location)
-      - [Tamil Nadu](location)
-      - [Jammu & Kashmir](location)
-      - [Madhya Pradesh](location)
-      - [Gujarat](location)
-      - [Jharkhand](location)
-      - [Chandigarh](location)
+      - Thanks
+      - Thank You
+      - thanks
+      - thanks a lot 
+      - thank you so much

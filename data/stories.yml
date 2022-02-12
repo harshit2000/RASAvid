@@ -60,14 +60,14 @@ stories:
       - intent: corona_stats_check
       - action: utter_corona_stats_check
       - intent: corona_states_stat
-      - action: actions_corona_state_stat
+      - action: actions_corona_states_stat
 
   - story: corona tracker 2 path
     steps:
       - intent: corona_stats_check
       - action: utter_corona_stats_check
       - intent: corona_states_stat
-      - action: actions_corona_state_stat
+      - action: actions_corona_states_stat
 
   - story: corona community spread path
     steps:
@@ -98,3 +98,13 @@ stories:
     steps:
       - intent: corona_infected person
       - action: utter_corona_infected person
+
+  - story: thanks path
+    steps:
+      - intent: Thanks
+      - action: utter_Thanks
+
+  - story: who am i
+    steps:
+      - intent: bot_challenge
+      - action: utter_iamabot
